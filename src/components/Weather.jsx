@@ -40,7 +40,7 @@ const Weather = () => {
     setError(""); // bersihkan error sebelumnya
     try {
       const apiKey = import.meta.env.VITE_APP_ID; // ambil API key
-      const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
       const response = await fetch(url); // fetch data cuaca
       const data = await response.json();
